@@ -3,6 +3,7 @@ title: "How to Configure Multiple Databases in Spring Boot?"
 datePublished: Sun Mar 12 2023 08:36:38 GMT+0000 (Coordinated Universal Time)
 cuid: clf556693000h09jq6aruezdh
 slug: how-to-configure-multiple-databases-in-spring-boot
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1678611105452/b0b62782-e541-4b01-acb1-e28599efe0f0.jpeg
 tags: postgresql, java, databases, springboot
 
 ---
