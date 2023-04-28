@@ -40,7 +40,7 @@ tags: javascript, development, developer, configuration, wemakedevs
 * This reduces a lot of complications for a small change.
     
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682681814898/7fbb6d1f-5da3-4c4d-8d14-d04ddc23b9c1.svg align="center")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682682529622/fee1e024-3495-4217-b7ee-336aa944a549.jpeg align="center")
 
 Used [flagsmith](https://app.flagsmith.com/projects) for the above example!
 
