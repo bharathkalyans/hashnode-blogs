@@ -1,8 +1,8 @@
 ---
-title: "Programming Languages for A/ML Development"
+title: "Programming Languages for AI/ML Development"
 datePublished: Sun May 07 2023 07:20:18 GMT+0000 (Coordinated Universal Time)
 cuid: clhd33ppu00060amk2c5350aj
-slug: programming-languages-for-aml-development
+slug: programming-languages-for-aiml-development
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/5uU8HSpfwkI/upload/08335fe97e5c6bb1e44f7aee5ba0662e.jpeg
 tags: java, javascript, python, machine-learning, wemakedevs
 
