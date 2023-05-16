@@ -30,7 +30,7 @@ tags: javascript, development, developer, configuration, wemakedevs
     
 * By using remote configuration, developers can experiment with different configurations and adapt their software to changing user needs and market conditions without requiring a new release.
     
-* Remote Config services are provided by Google Firebase, LaunchDarkly, FlagSmith(One I recommend), and many more(Do comment if you know some 😀)
+* Remote Config services are provided by Google Firebase, LaunchDarkly, [FlagSmith](https://flagsmith.com/) (One I recommend), and many more(Do comment if you know some 😀)
     
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1682681458143/97076c49-1580-45c3-a148-4be17f4f9197.png align="center")
