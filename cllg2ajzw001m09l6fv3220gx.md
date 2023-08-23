@@ -8,7 +8,7 @@ tags: ielts, abroad-studies
 
 ---
 
-I took my IELTS on the 12th of August 2023, and my individual band scores are
+I took my IELTS on the 13th of August 2023, and my individual band scores are
 
 1. **Listening - 7.5**
     
