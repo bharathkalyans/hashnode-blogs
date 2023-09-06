@@ -32,14 +32,65 @@ tags: java, documentation, apis, swagger
     
 * If we are using Spring Security, we must add a Swagger configuration to access this Swagger doc.
     
-* If you want to override this, if you are using spring security, you can add the following dependency. (Use it only for testing)
+
+If you want to override this, if you are using spring security, you can add the following dependency. (Use it only for testing)
+
+```java
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
+```
+
+### OpenApi Configuration
+
+* Let's configure the OpenApi details, which I have previously mentioned above.
     
-    ```java
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-validation</artifactId>
-    </dependency>
-    ```
+* Create a new Java class called OpenApiConfig inside any package(use config).
+    
+* Use the following code and change accordingly.
+    
+
+```javascript
+
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Contact;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.info.License;
+import io.swagger.v3.oas.annotations.servers.Server;
+
+@OpenAPIDefinition(
+        info = @Info(
+                contact = @Contact(
+                        name = "Bharath Kalyan S",
+                        email = "sbharath25@gmail.com",
+                        url = "https://twitter.com/bharathkalyans"
+                ),
+                description = "OpenApi Documentation for Personal Project 😄",
+                title = "Service for Fetching and Persisting Employee Data",
+                version = "1.0",
+                summary = "Add summary of your Service",
+
+                license = @License(name = "MIT-License")
+        ),
+        servers = {
+                @Server(
+                        description = "Local Dev",
+                        url = "http://localhost:8080"
+                ),
+                @Server(
+                        description = "Prod Env",
+                        url = "http://prod-env:8080"
+                )
+        }
+)
+public class OpenApiConfig {
+}
+```
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1693999226271/51c95b00-3220-4645-bb07-fd31e1f7c0d5.png align="center")
+
+* You can change the details as per your requirements.
     
 
 ---
