@@ -10,7 +10,7 @@ tags: java, documentation, apis, swagger
 
 * From Spring Boot 3.x onwards we can't use the old dependencies like Spring Fox Swagger & Spring Fox Swagger UI.
     
-* We have an [OpenAPI](https://springdoc.org/) Swagger in place of this and add the following dependency to your pom.xml file.
+* We have an [OpenAPI](https://springdoc.org/) Swagger in place of this and to get started, add the following dependency to your pom.xml file.
     
 
 ```swift
@@ -28,19 +28,8 @@ tags: java, documentation, apis, swagger
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1693992173699/8b17fa0e-ae03-4267-bf92-aa19e24ae931.png align="center")
 
-* To add details, for example, to change the definition, versions, etc. we must hardcode these values inside the spring boot application.
+* To customize details, for example, to change the definition, versions, etc. we must hardcode these values inside the spring boot application using annotations.
     
-* If we are using Spring Security, we must add a Swagger configuration to access this Swagger doc.
-    
-
-If you want to override this, if you are using spring security, you can add the following dependency. (Use it only for testing)
-
-```java
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-validation</artifactId>
-</dependency>
-```
 
 ### OpenApi Configuration
 
@@ -93,6 +82,63 @@ public class OpenApiConfig {
 * You can change the details as per your requirements.
     
 
+### Customizing Controller Names and Endpoints
+
+* To customize a particular controller, we will be using **@Tag** and **@Operation** for renaming and adding summary, description, etc. for the endpoints.
+    
+
+```javascript
+@RestController
+@RequestMapping(value = "api/v1/")
+@Tag(name = "Employee")
+public class EmployeeController {
+
+    @Autowired
+    private EmployeeService employeeService;
+
+    @GetMapping("/employees")
+    @Operation(
+            description = "Retrieve details of Employees",
+            summary = "All the details of employees will be fetched from the database.",
+            responses = {
+                    @ApiResponse(
+                            responseCode = "200",
+                            description = "Success"
+                    ),
+                    @ApiResponse(
+                            responseCode = "404",
+                            description = "Unable to Employees Fetch / Invalid EndPoint "
+                    )
+            }
+    )
+    public List<Employee> getAllEmployees() {
+        return employeeService.getAllEmployees();
+    }
+}
+```
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1694013933877/74a5463e-f846-48f4-b01f-75636ac315c4.png align="center")
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1694014106393/7760f5d5-5a4c-4034-8d4f-eae31157c112.png align="center")
+
+### Hiding Controllers or Endpoints
+
+* To hide any controller or any endpoint, we have to use **@Hidden** annotation.
+    
+* To hide the controller, annotate it above the class name, and to hide any endpoint annotate it above the method name.
+    
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1694014321386/cdc741c9-2db1-4bf7-870c-c746bdb160d8.png align="center")
+
+Both put and delete mappings will be hidden to the client/user.
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1694014385385/22fc8c31-f3ec-4d72-8b1e-19b9848fb62f.png align="center")
+
+* Swagger is a great tool when you are integrating these REST APIs into your front end. It helps the frontend team have a cleaner look and get good insights about the APIs.
+    
+
+Play around with it by referring to the official documentation [https://springdoc.org/](https://springdoc.org/)
+
 ---
 
-* I hope you liked this blog, will be writing a blog on how to use Swagger with Spring Security as well.
+* I hope you liked this blog, will be writing a blog on how to use Swagger with Spring Security as well which will be a continuation of this blog.
