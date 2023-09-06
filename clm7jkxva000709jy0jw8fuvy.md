@@ -1,8 +1,8 @@
 ---
-title: "Implement Swagger UI for Spring Boot 3.x"
+title: "Spring Boot 3.x + Swagger (OpenAPI 3)"
 datePublished: Wed Sep 06 2023 09:33:30 GMT+0000 (Coordinated Universal Time)
 cuid: clm7jkxva000709jy0jw8fuvy
-slug: implement-swagger-ui-for-spring-boot-3x
+slug: spring-boot-3x-swagger-openapi-3
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1693992696820/0f07158c-dee2-4095-85c3-5d09f439d973.jpeg
 tags: java, documentation, apis, swagger
 
